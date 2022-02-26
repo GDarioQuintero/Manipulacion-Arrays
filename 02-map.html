@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        const poduct = [
+            {title: 'bunger', price: 12000},
+            {title: 'pizza', price: 10000},
+        ];
+
+        const app = document.getElementById('app');
+        const list = poduct.map(product => {
+            return `<li>${product.title} - ${product.price}</li>`;
+        })
+        app.innerHTML = list.join('');//join() sirve para tomar un array y imprimirlo enun string solo
+
+    </script>
+</body>
+</html>
